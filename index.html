@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VideoObjectDetection</title>
+    <style>
+    .form {
+      max-width: 500px;
+      margin: auto;
+      padding: 46.5px;
+      font-size: xx-large;
+      font-style: initial;
+      font-family: -webkit-pictograph;
+      border-color: grey;
+      border-width: thick;
+      border-style: inset;
+      text-align:center;
+    }
+    .video {
+      max-width: 1200px;
+      margin: auto;
+      padding-top: 200px;
+      font-size: xx-large;
+      font-style: initial;
+      font-family: courier;
+      text-align:center;
+    }
+    body{
+    background-color: #cccccc;
+    background-image: linear-gradient(cadetblue,cornsilk,cadetblue);
+    }
+
+    </style>
+
+</head>
+<body>
+<div class="form">
+    <form action="/" class="d-flex" method="POST" enctype=multipart/form-data>
+        <label class="form-label" for="customFile">Upload your file here</label><br>
+        <input type="file" class="form-control" id="customFile" name="file" /><br>
+        <button class="btn btn-outline-success" type="submit">SUBMIT</button><br><br>
+        <a href="../static/detected/detected.avi" download>DOWNLOAD FILE FROM HERE</a>
+
+
+    </form>
+</div>
+<div class="video">
+        {% if result %}
+            <p>{{ result }}</p>
+        {% endif %}
+</div>
+</body>
+</html>
